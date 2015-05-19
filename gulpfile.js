@@ -76,6 +76,12 @@
 		return gulp.src(paths.dist.root + '/index.html').pipe(open('', { url: 'http://localhost:8080' }));
 	});
     
+    // Deploy dist folder to github gh-pages
+    gulp.task('deploy', ['dist'], function () {
+        return gulp.src(paths.dist.root + '/**/*')
+            .pipe(deploy());
+    });
+    
     // Watching files for changes 
     gulp.task('watch', function () {
 		gulp.watch(paths.libraries.scripts.concat(paths.libraries.styles), [ 'libraries', 'reload' ]);
