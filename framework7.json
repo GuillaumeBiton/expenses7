@@ -1,0 +1,18 @@
+{
+  "cwd": "/workspaces/expenses7",
+  "type": [
+    "web"
+  ],
+  "name": "Expenses7",
+  "framework": "core",
+  "template": "single-view",
+  "bundler": "vite",
+  "cssPreProcessor": false,
+  "theming": {
+    "customColor": false,
+    "color": "#007aff",
+    "darkMode": false,
+    "iconFonts": true
+  },
+  "customBuild": false
+}

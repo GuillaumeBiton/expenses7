@@ -1,26 +1,35 @@
 {
-    "name": "expenses7",
-    "description": "expenses management app",
-    "version": "0.0.1",
-    "authors": [
-        "guillaume Biton"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/GuillaumeBiton/expenses7"
-    },
-    "license": [
-        "MIT"
-    ],
-    "dependencies": {
-        "framework7": "^1.0.6",
-        "pouchdb": "^3.5.0"
-    },
-    "devDependencies": {
-        "gulp": "^3.8.11",
-        "gulp-connect": "^2.2.0",
-        "gulp-gh-pages": "^0.5.1",
-        "gulp-jade": "^1.0.0",
-        "gulp-open": "^0.3.2"
-    }
+  "name": "expenses7",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Expenses7",
+  "repository": "",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "cross-env NODE_ENV=development vite",
+    "build": "cross-env NODE_ENV=production vite build",
+    "postinstall": "cpy --flat ./node_modules/framework7-icons/fonts/*.* ./src/fonts/ && cpy --flat ./node_modules/material-icons/iconfont/*.* ./src/fonts/"
+  },
+  "browserslist": [
+    "IOS >= 15",
+    "Safari >= 15",
+    "last 5 Chrome versions",
+    "last 5 Firefox versions"
+  ],
+  "dependencies": {
+    "dom7": "^4.0.6",
+    "framework7": "^8.0.3",
+    "framework7-icons": "^5.0.5",
+    "material-icons": "^1.13.5",
+    "skeleton-elements": "^4.0.1",
+    "swiper": "^9.2.4"
+  },
+  "devDependencies": {
+    "cpy-cli": "^4.2.0",
+    "cross-env": "^7.0.3",
+    "postcss-preset-env": "^8.3.2",
+    "rollup-plugin-framework7": "^1.2.1",
+    "vite": "^4.3.3"
+  }
 }
