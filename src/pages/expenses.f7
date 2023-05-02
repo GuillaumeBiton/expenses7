@@ -24,7 +24,7 @@
         `}
         <div class="block-title">Add</div>
             <div class="block grid grid-cols-2 grid-gap">
-                <a href="#" class="button button-fill" @click=${addExpense}>Add</a>
+                <button class="button button-fill button-preloader ${isLoading ? 'button-loading' : ''}" @click="${localAddExpense}"><span class="preloader"></span><span>Add</span></button>
             </div>
         </div>
     </div>
@@ -32,6 +32,11 @@
     <script>
     export default (props, { $store }) => {
         let expense = $store.getters.expense;
+        let isLoading = false;
+
+        const localAddExpense = () => {
+          $store.dispatch('addExpense', "new" );
+        }
 
         return $render;
     };

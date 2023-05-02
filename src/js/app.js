@@ -21,7 +21,7 @@ import App from '../app.f7';
 var app = new Framework7({
   name: 'Expenses7', // App name
   theme: 'auto', // Automatic theme detection
-
+  darkMode: 'auto', // Automatic dark Mode 
 
   el: '#app', // App root element
   component: App, // App main component
