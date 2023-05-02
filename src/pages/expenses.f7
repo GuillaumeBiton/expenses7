@@ -24,7 +24,7 @@
         `}
         <div class="block-title">Add</div>
             <div class="block grid grid-cols-2 grid-gap">
-                <button class="button button-fill button-preloader ${isLoading ? 'button-loading' : ''}" @click="${localAddExpense}"><span class="preloader"></span><span>Add</span></button>
+                <button class="button button-fill" @click="${localAddExpense}"><span>Add</span></button>
             </div>
         </div>
     </div>

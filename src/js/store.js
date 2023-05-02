@@ -21,7 +21,6 @@ const store = createStore({
   actions: {
     addExpense({ state }, expense) {
       state.expense = [...state.expense, expense];
-      state.loading = false;
     },
     addExpenseAccount({ state }, expenseAccount) {
       state.expenseAccount = [...state.expenseAccount, expenseAccount];
