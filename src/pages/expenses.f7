@@ -17,7 +17,7 @@
             <div class="list list-strong inset list-dividers-ios simple-list">
               <ul>
                 ${expense.value.map((expense) => $h`
-                <li>${expense}</li>
+                <li>${expense.amount}</li>
                 `)}
               </ul>
             </div>
@@ -32,7 +32,7 @@
     <script>
     export default (props, { $store }) => {
         let expense = $store.getters.expense;
-        
+
         const localAddExpense = () => {
           $store.dispatch('addExpense', "new" );
         }

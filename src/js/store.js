@@ -5,10 +5,13 @@ const store = createStore({
   state: {
     loading: false,
     expenseAccount: [],
-    expense: [
-      'test',
-      'second'
-    ]
+    expense: [{
+      id: '1',
+      date: '10/03/2023',
+      category : 'Péage',
+      by: 'Guillaume Biton',
+      amount: '10,02 €'
+    }]
   },
   getters: {
     expenseAccount({ state }) {
